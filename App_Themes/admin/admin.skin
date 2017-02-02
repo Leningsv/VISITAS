@@ -1,0 +1,41 @@
+<%--
+Plantilla de máscara predeterminada. Las siguientes máscaras se proporcionan sólo como ejemplos.
+
+1. Máscara de control con nombre. SkinId debería definirse de forma única porque
+no se permite que haya varios SkinId por tipo de control en el mismo tema.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Máscara predeterminada. Skinid no está definido Sólo se permite 
+   una máscara de control por tipo de control en el mismo tema.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+Black
+        <SelectedNodeStyle BackColor="#D2CFD8" BorderStyle="Inset" BorderWidth="1px" Height="20px" Width="200px" Font-Size="XX-Small"  />
+<NodeStyle ForeColor="Navy"  Font-Size="XX-Small" /> 
+        <ParentNodeStyle BackColor="#20365F" BorderStyle="Outset" BorderWidth="1px" Font-Bold="True"
+            Height="20px" Width="200px" Font-Size="XX-Small" />
+Navy
+--%>
+<asp:TreeView runat="server" SkinID="trvmain"  NodeIndent="0" NodeWrap="True" ShowExpandCollapse="False" >
+        <SelectedNodeStyle BackColor="#0099CC" BorderStyle="Inset" BorderWidth="1px" Height="20px" Width="200px" Font-Size="XX-Small"  />
+        <NodeStyle ForeColor="Navy"  Font-Size="XX-Small" />                       
+        <ParentNodeStyle BackColor="#20365F" BorderStyle="Outset" BorderWidth="1px" Font-Bold="True"
+            Height="20px" Width="200px" Font-Size="XX-Small" />
+        <RootNodeStyle ForeColor="White" BackColor="#20365F" BorderStyle="Outset" BorderWidth="1px" Font-Bold="True"
+            Font-Italic="False" Height="20px" Width="200px" Font-Size="XX-Small"  />
+        <LeafNodeStyle ForeColor="Black" BackColor="#D2CFD8" BorderStyle="Inset" BorderWidth="1px" 
+            Height="15px" Width="180px" HorizontalPadding="10px" Font-Size="XX-Small" />  
+        
+</asp:TreeView>
+
+<asp:gridview runat="server" SkinID="grillamant" backcolor="#beb48c" ForeColor="#20365F" AllowPaging="True" AutoGenerateColumns="False"  PageSize="20" Width="75%" AllowSorting="True" EmptyDataText="No existen Datos para Mostrar"   >
+    <AlternatingRowStyle Backcolor="#e0deb5" ForeColor="#20365F"  />
+    <SelectedRowStyle BackColor="#8080FF" ForeColor="#20365F" />
+    <HeaderStyle Backcolor="#E3E4F2" ForeColor="#20365F" Font-Bold="True" />
+    <HeaderStyle Font-Bold="True" />
+    <FooterStyle BackColor="#E3E4F2" Font-Bold="True" ForeColor="#20365F" />
+    <PagerSettings Mode="NumericFirstLast" PageButtonCount="25" />
+</asp:gridview>

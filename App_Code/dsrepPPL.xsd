@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsrepPPL" targetNamespace="http://tempuri.org/dsrepPPL.xsd" xmlns:mstns="http://tempuri.org/dsrepPPL.xsd" xmlns="http://tempuri.org/dsrepPPL.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsrepPPL" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsrepPPL" msprop:Generator_DataSetName="dsrepPPL">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtrepPPL" msprop:Generator_TableClassName="dtrepPPLDataTable" msprop:Generator_TableVarName="tabledtrepPPL" msprop:Generator_TablePropName="dtrepPPL" msprop:Generator_RowDeletingName="dtrepPPLRowDeleting" msprop:Generator_RowChangingName="dtrepPPLRowChanging" msprop:Generator_RowEvHandlerName="dtrepPPLRowChangeEventHandler" msprop:Generator_RowDeletedName="dtrepPPLRowDeleted" msprop:Generator_UserTableName="dtrepPPL" msprop:Generator_RowChangedName="dtrepPPLRowChanged" msprop:Generator_RowEvArgName="dtrepPPLRowChangeEvent" msprop:Generator_RowClassName="dtrepPPLRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombres" msprop:Generator_ColumnVarNameInTable="columnnombres" msprop:Generator_ColumnPropNameInRow="nombres" msprop:Generator_ColumnPropNameInTable="nombresColumn" msprop:Generator_UserColumnName="nombres" type="xs:string" minOccurs="0" />
+              <xs:element name="etapa" msprop:Generator_ColumnVarNameInTable="columnetapa" msprop:Generator_ColumnPropNameInRow="etapa" msprop:Generator_ColumnPropNameInTable="etapaColumn" msprop:Generator_UserColumnName="etapa" type="xs:string" minOccurs="0" />
+              <xs:element name="pabellon" msprop:Generator_ColumnVarNameInTable="columnpabellon" msprop:Generator_ColumnPropNameInRow="pabellon" msprop:Generator_ColumnPropNameInTable="pabellonColumn" msprop:Generator_UserColumnName="pabellon" type="xs:string" minOccurs="0" />
+              <xs:element name="ala" msprop:Generator_ColumnVarNameInTable="columnala" msprop:Generator_ColumnPropNameInRow="ala" msprop:Generator_ColumnPropNameInTable="alaColumn" msprop:Generator_UserColumnName="ala" type="xs:string" minOccurs="0" />
+              <xs:element name="celda" msprop:Generator_ColumnVarNameInTable="columncelda" msprop:Generator_ColumnPropNameInRow="celda" msprop:Generator_ColumnPropNameInTable="celdaColumn" msprop:Generator_UserColumnName="celda" type="xs:string" minOccurs="0" />
+              <xs:element name="piso" msprop:Generator_ColumnVarNameInTable="columnpiso" msprop:Generator_ColumnPropNameInRow="piso" msprop:Generator_ColumnPropNameInTable="pisoColumn" msprop:Generator_UserColumnName="piso" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

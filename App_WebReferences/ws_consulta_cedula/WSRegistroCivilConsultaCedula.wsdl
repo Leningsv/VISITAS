@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.registrocivil.gob.ec/ConsultaCedula" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="WSRegistroCivilConsultaCedula" targetNamespace="http://www.registrocivil.gob.ec/ConsultaCedula" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://www.registrocivil.gob.ec/ConsultaCedula" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="BusquedaPorCedula" type="tns:BusquedaPorCedula" />
+      <xs:element name="BusquedaPorCedulaResponse" type="tns:BusquedaPorCedulaResponse" />
+      <xs:element name="WsUp" type="tns:WsUp" />
+      <xs:element name="WsUpResponse" type="tns:WsUpResponse" />
+      <xs:complexType name="BusquedaPorCedula">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Cedula" type="xs:string" />
+          <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+          <xs:element minOccurs="0" name="Contrasenia" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="BusquedaPorCedulaResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:cedula" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cedula">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CalleDomicilio" type="xs:string" />
+          <xs:element minOccurs="0" name="Cedula" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoError" type="xs:string" />
+          <xs:element minOccurs="0" name="CondicionCedulado" type="xs:string" />
+          <xs:element minOccurs="0" name="Conyuge" type="xs:string" />
+          <xs:element minOccurs="0" name="Domicilio" type="xs:string" />
+          <xs:element minOccurs="0" name="Error" type="xs:string" />
+          <xs:element minOccurs="0" name="EstadoCivil" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaCedulacion" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaNacimiento" type="xs:string" />
+          <xs:element minOccurs="0" name="FirmaElectronica" type="xs:string" />
+          <xs:element minOccurs="0" name="Genero" type="xs:string" />
+          <xs:element minOccurs="0" name="IndividualDactilar" type="xs:string" />
+          <xs:element minOccurs="0" name="Instruccion" type="xs:string" />
+          <xs:element minOccurs="0" name="LugarNacimiento" type="xs:string" />
+          <xs:element minOccurs="0" name="Nacionalidad" type="xs:string" />
+          <xs:element minOccurs="0" name="NombreMadre" type="xs:string" />
+          <xs:element minOccurs="0" name="NombrePadre" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombre" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroDomicilio" type="xs:string" />
+          <xs:element minOccurs="0" name="Profesion" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WsUp">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="WsUpResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:cedula" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="BusquedaPorCedula">
+    <wsdl:part name="parameters" element="tns:BusquedaPorCedula" />
+  </wsdl:message>
+  <wsdl:message name="WsUpResponse">
+    <wsdl:part name="parameters" element="tns:WsUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="WsUp">
+    <wsdl:part name="parameters" element="tns:WsUp" />
+  </wsdl:message>
+  <wsdl:message name="BusquedaPorCedulaResponse">
+    <wsdl:part name="parameters" element="tns:BusquedaPorCedulaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSRegistroCivilConsultaCedula">
+    <wsdl:operation name="BusquedaPorCedula">
+      <wsdl:input name="BusquedaPorCedula" message="tns:BusquedaPorCedula" />
+      <wsdl:output name="BusquedaPorCedulaResponse" message="tns:BusquedaPorCedulaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WsUp">
+      <wsdl:input name="WsUp" message="tns:WsUp" />
+      <wsdl:output name="WsUpResponse" message="tns:WsUpResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSRegistroCivilConsultaCedulaSoapBinding" type="tns:WSRegistroCivilConsultaCedula">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BusquedaPorCedula">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="BusquedaPorCedula">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="BusquedaPorCedulaResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WsUp">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="WsUp">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="WsUpResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSRegistroCivilConsultaCedula">
+    <wsdl:port name="WSRegistroCivilConsultaCedulaPort" binding="tns:WSRegistroCivilConsultaCedulaSoapBinding">
+      <soap:address location="https://www.bsg.gob.ec/sw/RC/BSGSW01_Consultar_Cedula" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
